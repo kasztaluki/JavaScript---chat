@@ -24,11 +24,13 @@ io.on('connection', function(socket) {
         io.emit('update', {
             users: userService.getAllUsers()
         });
+    })
     
     socket.on('disconnect', () => {
         userService.removeUser(socket.id);
         socket.broadcast.emit('update', {
         users: userService.getAllUsers()
+        });
     });
         
     socket.on('message', function(message){
