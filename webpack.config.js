@@ -40,7 +40,7 @@ module.exports = {
     
     plugins: [
         new HtmlWebpackPlugin({
-              template: 'client/index.html',
+              template: './client/index.html',
               filename: 'index.html',
               inject: 'body'
         }),
@@ -56,7 +56,7 @@ module.exports = {
 
 var plugins = [
 new HtmlWebpackPlugin({
-        template: './index.html',
+        template: './client/index.html',
         filename: 'index.html',
         inject: 'body',
     })
